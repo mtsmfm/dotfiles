@@ -45,3 +45,19 @@ alias gl='git log --graph --decorate --pretty=format:"%ad [%cn] <c:%h t:%t p:%p>
 n%d%Creset %s %n" --stat -p'
 alias gls='git log --stat --summary'
 alias gd='git diff'
+
+gsta(){
+  if [ $# -eq 1 ]; then
+    git add `git status -s -b | grep -v "^#" | awk '{print$1="";print}' | grep -v "^$" | awk "NR==$1"`
+  else
+    echo "Usage: gsta [gst number]"
+  fi
+}
+
+gstd(){
+  if [ $# -eq 1 ]; then
+    git diff -- `git status -s -b | grep -v "^#" | awk '{print$1="";print}' | grep -v "^$" | awk "NR==$1"`
+  else
+    echo "Usage: gstd [gst number]"
+  fi
+}
