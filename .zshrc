@@ -44,3 +44,4 @@ alias gst='git status && g stash list'
 alias gl='git log --graph --decorate --pretty=format:"%ad [%cn] <c:%h t:%t p:%p> %n %Cgree
 n%d%Creset %s %n" --stat -p'
 alias gls='git log --stat --summary'
+alias gd='git diff'
