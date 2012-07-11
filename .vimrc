@@ -51,7 +51,7 @@ let g:unite_enable_start_insert=1
 "
 noremap <C-P> :Unite buffer<CR>
 "
-noremap <C-N> :Unite -buffer-name=file file<CR>
+noremap <C-N> :Unite -buffer-name=files buffer_tab file_mru file bookmark file/new<CR>
 "
 noremap <C-Z> :Unite file_mru<CR>
 set mouse=a
