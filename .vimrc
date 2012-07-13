@@ -28,6 +28,7 @@ Bundle 'Align'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'vim-coffee-script'
 Bundle 'motemen/git-vim'
+Bundle 'vim-latex'
 
 filetype indent plugin on
 set number
@@ -58,3 +59,4 @@ set mouse=a
 
 set laststatus=2 "ステータスバーを常に表示
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+let g:Tex_CompileRule_dvi = 'platex --interaction=nonstopmode $*'
