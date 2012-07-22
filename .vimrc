@@ -59,4 +59,9 @@ set mouse=a
 
 set laststatus=2 "ステータスバーを常に表示
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+
+"vim latex
+let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_dvi = 'platex --interaction=nonstopmode $*'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_CompileRule_pdf = 'platex --interaction=nonstopmode $* && dvipdfmx $*.dvi'
