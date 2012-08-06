@@ -28,7 +28,7 @@ Bundle 'Align'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'vim-coffee-script'
 Bundle 'motemen/git-vim'
-Bundle 'vim-latex'
+Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 
 filetype indent plugin on
 set number
