@@ -61,3 +61,13 @@ gstd(){
     echo "Usage: gstd [gst number]"
   fi
 }
+
+## TAB で順に補完候補を切り替える
+setopt auto_menu
+## 補完候補のカーソル選択を有効に
+#zstyle ':completion:*:default' menu select=1
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
