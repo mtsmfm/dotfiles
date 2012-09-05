@@ -66,3 +66,6 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_dvi = 'platex --interaction=nonstopmode $*'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_pdf = 'platex --interaction=nonstopmode $* && dvipdfmx $*.dvi'
+
+set wildmenu                   " コマンド補完を強化
+set wildchar=<tab>             " コマンド補完を開始するキー
