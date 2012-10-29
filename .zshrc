@@ -71,3 +71,15 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
+
+# nautilusでフォルダ開く
+function naop() {
+if [ "$#" = "0" ]; then
+  nautilus ./
+else
+  for d in $@
+  do
+    nautilus $i
+  done
+fi
+}
