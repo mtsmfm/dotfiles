@@ -79,7 +79,7 @@ if [ "$#" = "0" ]; then
 else
   for d in $@
   do
-    nautilus $i
+    nautilus $d
   done
 fi
 }
