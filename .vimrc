@@ -69,3 +69,16 @@ let g:Tex_CompileRule_pdf = 'platex --interaction=nonstopmode $* && dvipdfmx $*.
 
 set wildmenu                   " コマンド補完を強化
 set wildchar=<tab>             " コマンド補完を開始するキー
+
+"Ref webdictでalcを使う設定
+nmap ,alc :<C-u>Ref webdict alc<Space>
+let g:ref_source_webdict_cmd = 'lynx -dump -nonumbers %s'
+"let g:ref_source_webdict_use_cache = 1
+let g:ref_source_webdict_sites = {
+      \ 'alc' : {
+      \   'url' : 'http://eow.alc.co.jp/%s/UTF-8/'
+      \   }
+      \ }
+function! g:ref_source_webdict_sites.alc.filter(output)
+    return join(split(a:output, "\n")[42 :], "\n")
+  endfunction
