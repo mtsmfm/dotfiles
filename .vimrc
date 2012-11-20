@@ -63,9 +63,7 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 
 "vim latex
 let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_CompileRule_dvi = 'platex --interaction=nonstopmode $*'
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_CompileRule_pdf = 'platex --interaction=nonstopmode $* && dvipdfmx $*.dvi'
+let g:Tex_CompileRule_pdf = 'xelatex $*'
 
 set wildmenu                   " コマンド補完を強化
 set wildchar=<tab>             " コマンド補完を開始するキー
