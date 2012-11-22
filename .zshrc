@@ -41,8 +41,7 @@ echo "$color$name$action%f%b"
 alias ls='ls --color=auto'
 alias g='git'
 alias gst='git status && g stash list'
-alias gl='git log --graph --decorate --pretty=format:"%ad [%cn] <c:%h t:%t p:%p> %n %Cgree
-n%d%Creset %s %n" --stat -p'
+alias gl='git log --graph --all --decorate'
 alias gls='git log --stat --summary'
 alias gd='git diff'
 
