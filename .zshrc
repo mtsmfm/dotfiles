@@ -82,3 +82,6 @@ else
   done
 fi
 }
+
+#Ctrl-wを/の手前まで
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
