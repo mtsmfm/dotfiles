@@ -30,6 +30,7 @@ Bundle 'vim-coffee-script'
 Bundle 'motemen/git-vim'
 Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 Bundle 'groenewege/vim-less'
+Bundle 'tpope/vim-markdown'
 
 filetype indent plugin on
 set number
@@ -62,8 +63,13 @@ set laststatus=2 "ステータスバーを常に表示
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
 "vim latex
+let tex_flavor = 'latex'
+set grepprg=grep\ -nH\ $*
+set shellslash
 let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_CompileRule_pdf = 'xelatex $*'
+let g:Tex_CompileRule_dvi = 'platex --interaction=nonstopmode $*'
+let g:Tex_CompileRule_pdf = 'dvipdfmx $*.dvi'
+let g:Tex_FormatDependency_pdf = 'dvi,pdf'
 
 set wildmenu                   " コマンド補完を強化
 set wildchar=<tab>             " コマンド補完を開始するキー
