@@ -1,4 +1,5 @@
 # Created by newuser for 4.3.10
+export TERM="xterm-256color"
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
