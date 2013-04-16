@@ -17,7 +17,6 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-rails'
 Bundle 'ruby.vim'
 Bundle 'unite.vim'
-Bundle 'molokai'
 Bundle 'neocomplcache'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mojako/ref-sources.vim'
@@ -30,7 +29,6 @@ Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
 
-colorscheme molokai
 filetype indent plugin on
 set number
 syntax on
