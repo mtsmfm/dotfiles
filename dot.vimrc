@@ -28,6 +28,7 @@ Bundle 'motemen/git-vim'
 Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-bundler'
 
 filetype indent plugin on
 set number
