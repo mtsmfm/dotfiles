@@ -29,6 +29,11 @@ Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-bundler'
+Bundle 'Solarized'
+
+set background=dark
+colorscheme solarized
+let g:solarized_termtrans=1
 
 filetype indent plugin on
 set number
