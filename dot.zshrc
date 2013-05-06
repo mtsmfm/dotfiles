@@ -1,7 +1,10 @@
 # Created by newuser for 4.3.10
 export TERM="xterm-256color"
+
+# rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
+
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -9,6 +12,9 @@ setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 autoload -U compinit
 compinit
+
+unset RUBYOPT
+bindkey -e
 
 autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
 
