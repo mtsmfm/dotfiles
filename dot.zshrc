@@ -64,7 +64,6 @@ alias gl='git log --graph --all --decorate'
 alias gls='git log --stat --summary'
 alias gd='git diff'
 alias be='bundle exec'
-alias memo='vim ~/workspace/memo/memo.md'
 
 gsta(){
   if [ $# -eq 1 ]; then
