@@ -1,0 +1,45 @@
+[user]
+  email = macchima23@gmail.com
+  name = Fumiaki MATSUSHIMA
+[color]
+  ui = auto
+[alias]
+  co = checkout
+  st = status -sb
+  pd = push --delete
+  c = commit -v
+  a = add
+  al = add -A .
+  au = add -u
+  ap = add -p
+  b = branch
+  ba = branch -a
+  bm = branch -a --merged
+  d = diff
+  ds = diff --staged
+  wd = diff --word-diff
+  l = log --decorate
+  lo = log --oneline --decorate --graph
+  ls = log --stat --decorate
+  lp = log -p --decorate
+  ru = remote update --prune
+  gn = grep -n
+  su = submodule update
+  rh = reset HEAD^
+  ri = !sh -c 'git rebase -i HEAD~$0'
+  rmrf = !sh -c 'git branch -d $0 && git push origin :$0'
+  cob = !sh -c 'git checkout origin/$0 -b $0'
+  gsub = "!sh -c 'git grep -l $0 $2 | xargs sed -i \"s/$0/$1/g\"'"
+[log]
+  date = iso
+[push]
+  default = tracking
+[core]
+  excludesfile = ~/.gitignore
+	editor = vim
+[github]
+  user = macchima23
+[help]
+  autocorrect = 1
+[pull]
+  rebase = true
