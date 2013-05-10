@@ -89,3 +89,9 @@ let g:ref_source_webdict_sites = {
 function! g:ref_source_webdict_sites.alc.filter(output)
     return join(split(a:output, "\n")[42 :], "\n")
   endfunction
+
+
+"コマンドラインをEmacs風に編集する
+:cnoremap <C-A> <Home>
+:cnoremap <C-F> <Right>
+:cnoremap <C-B> <Left>
