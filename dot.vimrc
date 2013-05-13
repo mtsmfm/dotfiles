@@ -15,25 +15,26 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-cucumber'
 Bundle 'ruby.vim'
 Bundle 'unite.vim'
 Bundle 'neocomplcache'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mojako/ref-sources.vim'
 Bundle 'thinca/vim-ref'
-Bundle 'Align'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'vim-coffee-script'
 Bundle 'motemen/git-vim'
 Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-bundler'
-Bundle 'Solarized'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'open-browser.vim'
+Bundle 'tyru/open-browser-github.vim'
 
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+colorscheme default
 
 filetype indent plugin on
 set number
@@ -47,9 +48,7 @@ set fileencodings=utf-8,ucs-bom,euc-jp,cp932,iso-2022-jp
 set fileformat=unix
 
 set list
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-highlight link ZenkakuSpace Error
-"match ZenkakuSpace /　/
+set listchars=tab:»-,eol:↲,extends:»,precedes:«,nbsp:%
 
 ab #r #coding:utf-8
 "
@@ -90,6 +89,26 @@ function! g:ref_source_webdict_sites.alc.filter(output)
     return join(split(a:output, "\n")[42 :], "\n")
   endfunction
 
+"indent guides
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd ctermbg=cyan
+hi IndentGuidesEven ctermbg=grey
+
+" 行末の空白文字を可視化
+highlight WhitespaceEOL cterm=underline ctermbg=red guibg=#FF0000
+au BufWinEnter * let w:m1 = matchadd("WhitespaceEOL", '\s\+$')
+au WinEnter * let w:m1 = matchadd("WhitespaceEOL", '\s\+$')
+
+" 行頭のTAB文字を可視化
+highlight TabString ctermbg=red guibg=red
+au BufWinEnter * let w:m2 = matchadd("TabString", '^\t+')
+au WinEnter * let w:m2 = matchadd("TabString", '^\t+')
+
+" 全角スペースの表示
+highlight ZenkakuSpace cterm=underline ctermbg=red guibg=#666666
+au BufWinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
 
 "コマンドラインをEmacs風に編集する
 :cnoremap <C-A> <Home>
