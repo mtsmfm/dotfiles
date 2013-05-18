@@ -51,6 +51,8 @@ set fileformat=unix
 set list
 set listchars=tab:»-,eol:↲,extends:»,precedes:«,nbsp:%
 
+set directory-=.
+
 ab #r #coding:utf-8
 "
 let g:unite_enable_start_insert=1
