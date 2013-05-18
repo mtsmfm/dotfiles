@@ -2,6 +2,8 @@ export TERM="xterm-256color"
 
 ZSH_THEME="gentoo"
 
+. /usr/share/zsh/site-contrib/powerline.zsh
+
 source '/usr/share/zsh/site-contrib/oh-my-zsh/templates/zshrc.zsh-template'
 plugins=(autojump cap git gnu-utils heroku knife rails3 rake rbenv ruby screen thor vundle zeus)
 
