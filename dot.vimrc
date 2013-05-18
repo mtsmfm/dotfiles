@@ -33,8 +33,9 @@ Bundle 'tpope/vim-bundler'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'open-browser.vim'
 Bundle 'tyru/open-browser-github.vim'
+Bundle 'kenchan/Tomorrow-Theme'
 
-colorscheme default
+colorscheme Tomorrow-Night
 
 filetype indent plugin on
 set number
