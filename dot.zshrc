@@ -1,11 +1,15 @@
-export TERM="xterm-256color"
+ZSH=/usr/share/zsh/site-contrib/oh-my-zsh
 
 ZSH_THEME="gentoo"
 
-. /usr/share/zsh/site-contrib/powerline.zsh
+plugins=(autojump bundler cap git gnu-utils heroku knife rails3 rake rbenv ruby screen thor vundle zeus)
 
-source '/usr/share/zsh/site-contrib/oh-my-zsh/templates/zshrc.zsh-template'
-plugins=(autojump cap git gnu-utils heroku knife rails3 rake rbenv ruby screen thor vundle zeus)
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+export TERM="xterm-256color"
+
+. /usr/share/zsh/site-contrib/powerline.zsh
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}("
 PROMPT=$'%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}%n@)%m %{$fg_bold[blue]%}%(!.%1~.%~)%{$reset_color%} $(git_prompt_info)\n%{$fg_bold[blue]%}$%{$reset_color%} '
