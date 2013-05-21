@@ -2,7 +2,7 @@ ZSH=/usr/share/zsh/site-contrib/oh-my-zsh
 
 ZSH_THEME="gentoo"
 
-plugins=(autojump bundler cap git gnu-utils heroku knife rails3 rake rbenv ruby screen thor vundle zeus)
+plugins=(autojump bundler cap git gnu-utils heroku knife rails3 rake rbenv ruby thor vundle zeus)
 
 source $ZSH/oh-my-zsh.sh
 
