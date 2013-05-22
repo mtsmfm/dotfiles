@@ -117,3 +117,14 @@ au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
 :cnoremap <C-A> <Home>
 :cnoremap <C-F> <Right>
 :cnoremap <C-B> <Left>
+
+"spe_cuke
+function! s:SetupSpeCuke()
+  command! RunTestFile exe '!sc ' . expand('%:p')
+  command! RunTestCase exe '!sc --line ' . line('.') . ' ' . expand('%:p')
+
+  nnoremap -tf :RunTestFile<CR>
+  nnoremap -tc :RunTestCase<CR>
+endfunction
+
+au BufRead,BufNewFile *_spec.rb,*.feature call s:SetupSpeCuke()
