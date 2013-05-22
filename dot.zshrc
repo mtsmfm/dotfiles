@@ -14,7 +14,11 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}("
 PROMPT=$'%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}%n@)%m %{$fg_bold[blue]%}%(!.%1~.%~)%{$reset_color%} $(git_prompt_info)\n%{$fg_bold[blue]%}$%{$reset_color%} '
 
 _Z_CMD=j
-. /usr/share/z/z.sh
+if which brew > /dev/null; then
+  . `brew --prefix`/etc/profile.d/z.sh
+else
+  . /usr/share/z/z.sh
+fi
 
 ## 補完時にhjklで選択
 bindkey -M menuselect 'h' vi-backward-char
