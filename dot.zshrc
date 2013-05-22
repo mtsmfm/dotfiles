@@ -7,7 +7,6 @@ plugins=(autojump bundler cap git gnu-utils heroku knife rails3 rake rbenv ruby 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export TERM="xterm-256color"
 
 . /usr/share/zsh/site-contrib/powerline.zsh
 
