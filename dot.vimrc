@@ -66,7 +66,7 @@ syntax enable
 
 set term=screen-256color
 set t_Co=256
-set background=light
+set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 hi Pmenu ctermbg=4
