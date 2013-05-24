@@ -1,10 +1,5 @@
-set nocompatible " be iMproved
-
-filetype off " required!
-
-set rtp+=~/.vim/bundle/vundle/set nocompatible " be iMproved
-
-filetype off " required!
+set nocompatible               " be iMproved
+filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -35,9 +30,10 @@ Bundle 'open-browser.vim'
 Bundle 'tyru/open-browser-github.vim'
 Bundle 'kenchan/Tomorrow-Theme'
 
+filetype plugin indent on     " required!
+
 colorscheme Tomorrow-Night
 
-filetype indent plugin on
 set number
 syntax on
 set ts=2
