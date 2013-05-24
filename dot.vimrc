@@ -1,126 +1,174 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
-
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle
-" required!
 Bundle 'gmarik/vundle'
 
-" My Bundles here:
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-bundler'
+" colorschema
+Bundle 'xoria256.vim'
+Bundle 'pyte'
+Bundle 'Solarized'
+Bundle 'aereal/vim-magica-colors'
+Bundle 'jpo/vim-railscasts-theme'
+Bundle '29decibel/codeschool-vim-theme'
+
+Bundle 'vimwiki'
+Bundle 'Rename'
+Bundle 'taglist.vim'
+Bundle 'repeat.vim'
+Bundle 'matchit.zip'
+Bundle 'SuperTab'
+
+Bundle 'scrooloose/syntastic'
+
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+
+Bundle 'kana/vim-textobj-user'
+Bundle 'kana/vim-textobj-fold'
+Bundle 'kana/vim-textobj-indent'
+Bundle 'kana/vim-textobj-lastpat'
+
+Bundle 'Shougo/vimfiler'
+
+Bundle 'h1mesuke/vim-alignta'
+
+Bundle 'Shougo/unite.vim'
+Bundle 'tsukkee/unite-help'
+Bundle 'h1mesuke/unite-outline'
+Bundle 'basyura/unite-rails'
+Bundle 'tsukkee/unite-tag'
+
 Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
-Bundle 'ruby.vim'
-Bundle 'unite.vim'
-Bundle 'neocomplcache'
-Bundle 'scrooloose/nerdtree'
-Bundle 'mojako/ref-sources.vim'
-Bundle 'thinca/vim-ref'
-Bundle 'motemen/git-vim'
-Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
-Bundle 'groenewege/vim-less'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-bundler'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'open-browser.vim'
-Bundle 'tyru/open-browser-github.vim'
-Bundle 'kenchan/Tomorrow-Theme'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
 
-filetype plugin indent on     " required!
+Bundle 'csexton/trailertrash.vim'
 
-colorscheme Tomorrow-Night
+Bundle 'kchmck/vim-coffee-script'
 
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
+
+Bundle 'hail2u/vim-css3-syntax'
+
+Bundle 'maxbrunsfeld/vim-yankstack'
+
+Bundle 'slim-template/vim-slim'
+
+filetype plugin indent on
+syntax enable
+
+set term=screen-256color
+set t_Co=256
+set background=light
+let g:solarized_termtrans=1
+colorscheme solarized
+hi Pmenu ctermbg=4
+
+set ambiwidth=double
+set autoread
+set hidden
 set number
-syntax on
-set ts=2
-set expandtab
-set sw=2
-set encoding=utf-8
-set termencoding=utf-8
-set fileencodings=utf-8,ucs-bom,euc-jp,cp932,iso-2022-jp
-set fileformat=unix
-
-set list
-set listchars=tab:»-,eol:↲,extends:»,precedes:«,nbsp:%
+set showmatch
+set ttymouse=xterm2
+set wildmode=list:longest,list:full
 
 set directory-=.
 
-ab #r #coding:utf-8
-"
-let g:unite_enable_start_insert=1
-"
-noremap <C-P> :Unite buffer<CR>
-"
-noremap <C-N> :Unite -buffer-name=files buffer_tab file_mru file bookmark file/new<CR>
-"
-noremap <C-Z> :Unite file_mru<CR>
-set mouse=a
+"backup
+set nobackup
 
-set laststatus=2 "ステータスバーを常に表示
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+"encoding
+set enc=utf-8
+set fenc=utf-8
+set fencs=utf-8,iso-2022-jp,euc-jp,cp932
+set fileformats=unix,dos
 
-"vim latex
-let tex_flavor = 'latex'
-set grepprg=grep\ -nH\ $*
-set shellslash
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_CompileRule_dvi = 'platex --interaction=nonstopmode $*'
-let g:Tex_CompileRule_pdf = 'dvipdfmx $*.dvi'
-let g:Tex_FormatDependency_pdf = 'dvi,pdf'
+"Tab
+set expandtab
+set smartindent
+set ts=2 sw=2 sts=2
 
-set wildmenu                   " コマンド補完を強化
-set wildchar=<tab>             " コマンド補完を開始するキー
+"search
+set nohlsearch
+set ignorecase
+set smartcase
+set incsearch
 
-"Ref webdictでalcを使う設定
-nmap ,alc :<C-u>Ref webdict alc<Space>
-let g:ref_source_webdict_cmd = 'lynx -dump -nonumbers %s'
-"let g:ref_source_webdict_use_cache = 1
-let g:ref_source_webdict_sites = {
-      \ 'alc' : {
-      \   'url' : 'http://eow.alc.co.jp/%s/UTF-8/'
-      \   }
-      \ }
-function! g:ref_source_webdict_sites.alc.filter(output)
-    return join(split(a:output, "\n")[42 :], "\n")
-  endfunction
+"statusline
+set laststatus=2
 
-"indent guides
-let g:indent_guides_guide_size = 1
-let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd ctermbg=cyan
-hi IndentGuidesEven ctermbg=grey
+set clipboard=unnamedplus
 
-" 行末の空白文字を可視化
-highlight WhitespaceEOL cterm=underline ctermbg=red guibg=#FF0000
-au BufWinEnter * let w:m1 = matchadd("WhitespaceEOL", '\s\+$')
-au WinEnter * let w:m1 = matchadd("WhitespaceEOL", '\s\+$')
+" keymap
+nnoremap j gj
+nnoremap k gk
 
-" 行頭のTAB文字を可視化
-highlight TabString ctermbg=red guibg=red
-au BufWinEnter * let w:m2 = matchadd("TabString", '^\t+')
-au WinEnter * let w:m2 = matchadd("TabString", '^\t+')
+nnoremap wh <C-w>h
+nnoremap wj <C-w>j
+nnoremap wk <C-w>k
+nnoremap wl <C-w>l
 
-" 全角スペースの表示
-highlight ZenkakuSpace cterm=underline ctermbg=red guibg=#666666
-au BufWinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
-au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+nnoremap Y y$
 
-"コマンドラインをEmacs風に編集する
-:cnoremap <C-A> <Home>
-:cnoremap <C-F> <Right>
-:cnoremap <C-B> <Left>
+nnoremap ; :
+nnoremap : ;
 
-"spe_cuke
-function! s:SetupSpeCuke()
-  command! RunTestFile exe '!sc ' . expand('%:p')
-  command! RunTestCase exe '!sc --line ' . line('.') . ' ' . expand('%:p')
+nnoremap <Space>. :<C-u>edit $MYVIMRC<CR>
+nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
 
-  nnoremap -tf :RunTestFile<CR>
-  nnoremap -tc :RunTestCase<CR>
-endfunction
+cnoremap <C-a> <Home>
+cnoremap <C-x> <C-r>=expand('%:p:h')<CR>/
+cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 
-au BufRead,BufNewFile *_spec.rb,*.feature call s:SetupSpeCuke()
+" <Leader>
+inoremap <Leader>date <C-R>=strftime('%Y/%m/%d(%a)')<CR>
+inoremap <Leader>time <C-R>=strftime('%H:%M:%S')<CR>
+
+" unite.vim
+nnoremap <silent> ,uf :<C-u>Unite file<CR>
+nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
+nnoremap <silent> ,uo :<C-u>Unite outline<CR>
+nnoremap <silent> ,ua :<C-u>Unite alignta<CR>
+nnoremap <silent> ,uh :<C-u>Unite help<CR>
+
+" unite-alignta
+let g:unite_source_alignta_preset_arguments = [
+  \ ["Align at ':'", '<<0 \ /1 :'],
+  \]
+
+" vimwiki
+let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+
+" vimfiler
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_safe_mode_by_default = 0
+
+" show invisibles
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
+" yankstack
+nmap <C-p> <Plug>yankstack_substitute_older_paste
+
+" syntastic
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 3
+
+augroup MyAutoCmd
+  autocmd!
+
+  "自動的に QuickFix リストを表示する
+  autocmd QuickfixCmdPost make,grep,grepadd,vimgrep,vimgrepadd cwin
+
+  autocmd BufWritePost $MYVIMRC nested source $MYVIMRC | if has('gui_running') | source $MYGVIMRC
+  autocmd BufWritePost $MYGVIMRC if has('gui_running') | source $MYGVIMRC
+
+  autocmd BufWritePre * :Trim
+augroup END
