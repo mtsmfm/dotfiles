@@ -28,4 +28,6 @@ bindkey -M menuselect 'l' vi-forward-char
 
 [[ $TERM = xterm ]] && export TERM="xterm-256color"
 
+unset RUBYOPT
+
 eval "$(rbenv init - zsh)"
