@@ -71,7 +71,6 @@ let g:solarized_termtrans=1
 colorscheme solarized
 hi Pmenu ctermbg=4
 
-set ambiwidth=double
 set autoread
 set hidden
 set number
