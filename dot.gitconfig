@@ -1,5 +1,5 @@
 [user]
-  email = macchima23@gmail.com
+  email = mtsmfm@gmail.com
   name = Fumiaki MATSUSHIMA
 [color]
   ui = auto
@@ -38,7 +38,7 @@
   excludesfile = ~/.gitignore
 	editor = vim
 [github]
-  user = macchima23
+  user = mtsmfm
 [help]
   autocorrect = 1
 [pull]
