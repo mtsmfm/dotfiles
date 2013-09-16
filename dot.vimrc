@@ -112,6 +112,8 @@ set laststatus=2
 
 set clipboard=unnamedplus
 
+set cursorline
+
 " keymap
 nnoremap j gj
 nnoremap k gk
