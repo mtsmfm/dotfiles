@@ -63,7 +63,7 @@ Bundle 'slim-template/vim-slim'
 
 Bundle 'scrooloose/nerdtree'
 
-Bundle 'unifieddialog/vim-rspec-focus'
+Bundle 'mtsmfm/vim-rspec-focus'
 
 filetype plugin indent on
 syntax enable
@@ -193,7 +193,3 @@ function! s:SetupSpeCuke()
 endfunction
 
 au BufRead,BufNewFile *_spec.rb,*.feature call s:SetupSpeCuke()
-
-" vim-rspec-focus
-nnoremap <leader>t :AddFocusTag<CR>
-nnoremap <leader>r :RemoveAllFocusTags<CR>
