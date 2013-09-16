@@ -45,7 +45,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
+Bundle 'mtsmfm/vim-surround'
 Bundle 'tpope/vim-fugitive'
 
 Bundle 'csexton/trailertrash.vim'
