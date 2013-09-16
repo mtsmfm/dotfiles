@@ -65,6 +65,9 @@ Bundle 'scrooloose/nerdtree'
 
 Bundle 'mtsmfm/vim-rspec-focus'
 
+Bundle 'rhysd/clever-f.vim'
+Bundle 'coderifous/textobj-word-column.vim'
+
 filetype plugin indent on
 syntax enable
 
