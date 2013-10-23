@@ -67,6 +67,9 @@ Bundle 'mtsmfm/vim-rspec-focus'
 
 Bundle 'rhysd/clever-f.vim'
 Bundle 'coderifous/textobj-word-column.vim'
+Bundle 'mattn/emmet-vim'
+
+Bundle 'jgdavey/vim-blockle'
 
 filetype plugin indent on
 syntax enable
@@ -112,7 +115,6 @@ set laststatus=2
 
 set clipboard=unnamedplus
 
-set cursorline
 
 " keymap
 nnoremap j gj
@@ -150,6 +152,7 @@ let g:unite_source_alignta_preset_arguments = [
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_ext2syntax = {'.md': 'markdown'}
 
 " vimfiler
 let g:vimfiler_as_default_explorer = 1
@@ -171,9 +174,6 @@ augroup MyAutoCmd
 
   "自動的に QuickFix リストを表示する
   autocmd QuickfixCmdPost make,grep,grepadd,vimgrep,vimgrepadd cwin
-
-  autocmd BufWritePost $MYVIMRC nested source $MYVIMRC | if has('gui_running') | source $MYGVIMRC
-  autocmd BufWritePost $MYGVIMRC if has('gui_running') | source $MYGVIMRC
 
   autocmd BufWritePre * :Trim
 augroup END
@@ -198,3 +198,27 @@ function! s:SetupSpeCuke()
 endfunction
 
 au BufRead,BufNewFile *_spec.rb,*.feature call s:SetupSpeCuke()
+
+"cursorline
+set cursorline
+highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
+
+"移動する時に cursorline を off にして軽くする
+let g:boostmove=0
+set updatetime=50
+au CursorMoved  * call BoostMoveON()
+au CursorMovedI * call BoostMoveON()
+au CursorHold   * call BoostMoveOFF()
+au CursorHoldI  * call BoostMoveOFF()
+function BoostMoveON()
+  if (g:boostmove == 0)
+    let g:boostmove=1
+    setlocal nocursorline
+  endif
+endfunction
+function BoostMoveOFF()
+  if g:boostmove==1
+    let g:boostmove=0
+    setlocal cursorline
+  endif
+endfunction
