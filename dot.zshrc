@@ -4,6 +4,9 @@ ZSH_THEME="gentoo"
 
 plugins=(autojump bundler cap git gnu-utils heroku knife rails3 rake rbenv ruby thor vundle zeus)
 
+unset RUBYOPT
+eval "$(rbenv init - zsh)"
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -25,7 +28,3 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
 [[ $TERM = xterm ]] && export TERM="xterm-256color"
-
-unset RUBYOPT
-
-eval "$(rbenv init - zsh)"
