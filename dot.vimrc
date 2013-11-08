@@ -72,6 +72,8 @@ Bundle 'mattn/emmet-vim'
 
 Bundle 'jgdavey/vim-blockle'
 
+Bundle 'rking/ag.vim'
+
 filetype plugin indent on
 syntax enable
 
