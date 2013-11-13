@@ -46,5 +46,4 @@
 [rebase]
   autosquash = true
 [url "git@github.com:"]
-  pushinsteadof = "https://github.com/"
-  pushinsteadof = "git://github.com/"
+  insteadOf = https://github.com/
