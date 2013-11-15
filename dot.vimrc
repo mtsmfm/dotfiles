@@ -155,7 +155,7 @@ let g:unite_source_alignta_preset_arguments = [
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_ext2syntax = {'.md': 'markdown'}
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown'}
 
 " vimfiler
 let g:vimfiler_as_default_explorer = 1
