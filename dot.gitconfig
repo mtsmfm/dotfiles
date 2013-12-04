@@ -33,7 +33,7 @@
 [log]
   date = iso
 [push]
-  default = tracking
+  default = simple
 [core]
   excludesfile = ~/.gitignore
 	editor = vim
