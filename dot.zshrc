@@ -2,7 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="amuse"
 
-plugins=(autojump bundler cap git gnu-utils heroku knife rails3 rake rbenv ruby thor vundle zeus)
+plugins=(autojump bundler cap git gnu-utils heroku knife rails rake rbenv ruby thor vundle zeus)
 
 unset RUBYOPT
 eval "$(rbenv init - zsh)"
