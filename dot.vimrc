@@ -72,6 +72,8 @@ Bundle 'mattn/emmet-vim'
 
 Bundle 'jgdavey/vim-blockle'
 
+Bundle 'mtsmfm/vim-cursorline-boost'
+
 Bundle 'rking/ag.vim'
 
 filetype plugin indent on
@@ -202,26 +204,4 @@ endfunction
 
 au BufRead,BufNewFile *_spec.rb,*.feature call s:SetupSpeCuke()
 
-"cursorline
-set cursorline
 highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
-
-"移動する時に cursorline を off にして軽くする
-let g:boostmove=0
-set updatetime=50
-au CursorMoved  * call BoostMoveON()
-au CursorMovedI * call BoostMoveON()
-au CursorHold   * call BoostMoveOFF()
-au CursorHoldI  * call BoostMoveOFF()
-function BoostMoveON()
-  if (g:boostmove == 0)
-    let g:boostmove=1
-    setlocal nocursorline
-  endif
-endfunction
-function BoostMoveOFF()
-  if g:boostmove==1
-    let g:boostmove=0
-    setlocal cursorline
-  endif
-endfunction
