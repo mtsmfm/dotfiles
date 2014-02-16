@@ -142,7 +142,7 @@ inoremap <Leader>date <C-R>=strftime('%Y/%m/%d(%a)')<CR>
 inoremap <Leader>time <C-R>=strftime('%H:%M:%S')<CR>
 
 " unite.vim
-nnoremap <silent> ,uf :<C-u>Unite file<CR>
+nnoremap <silent> ,uf :<C-u>Unite file file/new<CR>
 nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
 nnoremap <silent> ,uo :<C-u>Unite outline<CR>
 nnoremap <silent> ,ua :<C-u>Unite alignta<CR>
