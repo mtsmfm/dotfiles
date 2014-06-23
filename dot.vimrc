@@ -1,80 +1,101 @@
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-set rtp+=/usr/lib64/python3.3/site-packages/powerline/bindings/vim
-call vundle#rc()
+if has('vim_starting')
+  set nocompatible               " Be iMproved
 
-Bundle 'gmarik/vundle'
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+NeoBundle 'gmarik/vundle'
 
 " colorschema
-Bundle 'xoria256.vim'
-Bundle 'pyte'
-Bundle 'Solarized'
-Bundle 'aereal/vim-magica-colors'
-Bundle 'jpo/vim-railscasts-theme'
-Bundle '29decibel/codeschool-vim-theme'
+NeoBundle 'xoria256.vim'
+NeoBundle 'pyte'
+NeoBundle 'Solarized'
+NeoBundle 'aereal/vim-magica-colors'
+NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle '29decibel/codeschool-vim-theme'
 
-Bundle 'vimwiki'
-Bundle 'Rename'
-Bundle 'taglist.vim'
-Bundle 'repeat.vim'
-Bundle 'matchit.zip'
-Bundle 'SuperTab'
+NeoBundle 'vimwiki'
+NeoBundle 'Rename'
+NeoBundle 'taglist.vim'
+NeoBundle 'repeat.vim'
+NeoBundle 'matchit.zip'
+NeoBundle 'SuperTab'
 
-Bundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'nelstrom/vim-textobj-rubyblock'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'ecomba/vim-ruby-refactoring'
+NeoBundle 'nelstrom/vim-textobj-rubyblock'
 
-Bundle 'kana/vim-textobj-user'
-Bundle 'kana/vim-textobj-fold'
-Bundle 'kana/vim-textobj-indent'
-Bundle 'kana/vim-textobj-lastpat'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'kana/vim-textobj-fold'
+NeoBundle 'kana/vim-textobj-indent'
+NeoBundle 'kana/vim-textobj-lastpat'
 
-Bundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimfiler'
 
-Bundle 'h1mesuke/vim-alignta'
+NeoBundle 'h1mesuke/vim-alignta'
 
-Bundle 'Shougo/unite.vim'
-Bundle 'tsukkee/unite-help'
-Bundle 'h1mesuke/unite-outline'
-Bundle 'basyura/unite-rails'
-Bundle 'tsukkee/unite-tag'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tsukkee/unite-help'
+NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'basyura/unite-rails'
+NeoBundle 'tsukkee/unite-tag'
 
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-endwise'
-Bundle 'mtsmfm/vim-surround'
-Bundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'mtsmfm/vim-surround'
+NeoBundle 'tpope/vim-fugitive'
 
-Bundle 'csexton/trailertrash.vim'
+NeoBundle 'csexton/trailertrash.vim'
 
-Bundle 'kchmck/vim-coffee-script'
+NeoBundle 'kchmck/vim-coffee-script'
 
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/webapi-vim'
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'mattn/webapi-vim'
 
-Bundle 'hail2u/vim-css3-syntax'
+NeoBundle 'hail2u/vim-css3-syntax'
 
-Bundle 'maxbrunsfeld/vim-yankstack'
+NeoBundle 'maxbrunsfeld/vim-yankstack'
 
-Bundle 'slim-template/vim-slim'
+NeoBundle 'slim-template/vim-slim'
 
-Bundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
 
-Bundle 'mtsmfm/vim-rspec-focus'
+NeoBundle 'mtsmfm/vim-rspec-focus'
 
-Bundle 'rhysd/clever-f.vim'
-Bundle 'coderifous/textobj-word-column.vim'
-Bundle 'mattn/emmet-vim'
+NeoBundle 'rhysd/clever-f.vim'
+NeoBundle 'coderifous/textobj-word-column.vim'
+NeoBundle 'mattn/emmet-vim'
 
-Bundle 'jgdavey/vim-blockle'
+NeoBundle 'jgdavey/vim-blockle'
 
-Bundle 'mtsmfm/vim-cursorline-boost'
+NeoBundle 'mtsmfm/vim-cursorline-boost'
 
-Bundle 'rking/ag.vim'
+NeoBundle 'rking/ag.vim'
 
 filetype plugin indent on
 syntax enable
