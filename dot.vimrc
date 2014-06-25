@@ -62,6 +62,7 @@ NeoBundle 'tsukkee/unite-help'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'tsukkee/unite-tag'
+NeoBundle 'mtsmfm/unite-turnip'
 
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-rails'
@@ -170,6 +171,7 @@ nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
 nnoremap <silent> ,uo :<C-u>Unite outline<CR>
 nnoremap <silent> ,ua :<C-u>Unite alignta<CR>
 nnoremap <silent> ,uh :<C-u>Unite help<CR>
+nnoremap <silent> ,ut :<C-u>Unite turnip<CR>
 
 " unite-alignta
 let g:unite_source_alignta_preset_arguments = [
