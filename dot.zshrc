@@ -27,3 +27,5 @@ bindkey -M menuselect 'l' vi-forward-char
 alias vi=vim
 
 [[ $TERM = xterm ]] && export TERM="xterm-256color"
+
+eval "$(direnv hook zsh)"
