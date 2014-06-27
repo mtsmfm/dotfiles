@@ -2,3 +2,4 @@
 *.swp
 tags
 .ruby-version
+.envrc
