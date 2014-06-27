@@ -58,6 +58,7 @@ NeoBundle 'Shougo/vimfiler'
 NeoBundle 'h1mesuke/vim-alignta'
 
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tsukkee/unite-help'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'basyura/unite-rails'
