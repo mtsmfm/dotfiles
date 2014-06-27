@@ -99,6 +99,8 @@ NeoBundle 'mtsmfm/vim-cursorline-boost'
 
 NeoBundle 'rking/ag.vim'
 
+NeoBundle 'bling/vim-airline'
+
 filetype plugin indent on
 syntax enable
 
