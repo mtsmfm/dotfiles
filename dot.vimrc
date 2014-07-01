@@ -5,6 +5,8 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
+set runtimepath+=/usr/lib64/python3.3/site-packages/powerline/bindings/vim
+
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
 
@@ -98,8 +100,6 @@ NeoBundle 'jgdavey/vim-blockle'
 NeoBundle 'mtsmfm/vim-cursorline-boost'
 
 NeoBundle 'rking/ag.vim'
-
-NeoBundle 'bling/vim-airline'
 
 filetype plugin indent on
 syntax enable
