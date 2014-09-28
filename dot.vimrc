@@ -201,7 +201,7 @@ augroup MyAutoCmd
   "自動的に QuickFix リストを表示する
   autocmd QuickfixCmdPost make,grep,grepadd,vimgrep,vimgrepadd cwin
 
-  autocmd BufWritePre * :Trim
+  autocmd BufWritePre * :TrailerTrim
 augroup END
 
 " 全角スペースの表示
