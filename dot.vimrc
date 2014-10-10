@@ -226,3 +226,13 @@ endfunction
 au BufRead,BufNewFile *_spec.rb,*.feature call s:SetupSpeCuke()
 
 highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
+
+let g:rails_projections = {
+      \ "app/workers/*_worker.rb": {
+      \   "command": "worker",
+      \   "template":
+      \     ["class %SUploader", "end"],
+      \   "test": [
+      \     "spec/workers/%s_uploader_spec.rb"
+      \   ]
+      \ }}
