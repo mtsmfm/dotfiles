@@ -34,7 +34,7 @@
 [log]
   date = iso
 [push]
-  default = simple
+  default = current
 [core]
   excludesfile = ~/.gitignore
 	editor = vim
