@@ -50,3 +50,5 @@
   insteadOf = https://github.com/
 [core]
   pager = diff-highlight | less
+[init]
+	templatedir = ~/.gittemplate
