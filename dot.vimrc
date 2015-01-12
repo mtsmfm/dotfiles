@@ -19,12 +19,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'gmarik/vundle'
 
 " colorschema
-NeoBundle 'xoria256.vim'
-NeoBundle 'pyte'
 NeoBundle 'Solarized'
-NeoBundle 'aereal/vim-magica-colors'
-NeoBundle 'jpo/vim-railscasts-theme'
-NeoBundle '29decibel/codeschool-vim-theme'
 
 NeoBundle 'vimwiki'
 NeoBundle 'Rename'
