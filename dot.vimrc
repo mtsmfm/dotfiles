@@ -85,6 +85,8 @@ NeoBundle 'mtsmfm/vim-cursorline-boost'
 
 NeoBundle 'rking/ag.vim'
 
+NeoBundle 'mtscout6/vim-cjsx'
+
 call neobundle#end()
 
 " Required:
