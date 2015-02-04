@@ -29,14 +29,3 @@ alias vi=vim
 [[ $TERM = xterm ]] && export TERM="xterm-256color"
 
 eval "$(direnv hook zsh)"
-
-function peco-jump () {
-  local selected_dir=$(find ~ -maxdepth 4 -type d -regex "^${HOME}/[^\.].*$" | grep -v "${HOME}/tmp" | peco --query "$LBUFFER")
-  if [ -n "$selected_dir" ]; then
-    BUFFER="cd ${selected_dir}"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N peco-jump
-bindkey '^S' peco-jump
