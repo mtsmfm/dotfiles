@@ -52,3 +52,5 @@
   pager = diff-highlight | less
 [init]
 	templatedir = ~/.gittemplate
+[merge]
+	tool = vimdiff
