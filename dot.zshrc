@@ -28,4 +28,6 @@ alias vi=vim
 
 [[ $TERM = xterm ]] && export TERM="xterm-256color"
 
+HISTSIZE=999999999
+
 eval "$(direnv hook zsh)"
