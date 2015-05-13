@@ -14,8 +14,10 @@ source $ZSH/oh-my-zsh.sh
 _Z_CMD=j
 if which brew > /dev/null; then
   . `brew --prefix`/etc/profile.d/z.sh
-else
+elif [ -x /usr/share/z/z.sh ]; then
   . /usr/share/z/z.sh
+else
+  . /usr/lib/z.sh
 fi
 
 ## 補完時にhjklで選択
