@@ -102,6 +102,7 @@ set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 hi Pmenu ctermbg=4
+syntax on
 
 set autoread
 set hidden
