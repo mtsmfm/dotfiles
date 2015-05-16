@@ -1,4 +1,4 @@
-eval $(ssh-agent)
+eval $(keychain --eval --agents ssh -Q --quiet id_ecdsa)
 
 export DE='gnome'
 export EDITOR='vim'
