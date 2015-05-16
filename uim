@@ -134,7 +134,7 @@
  )
 )
 
-;; ja-rk-rule-update を無効に
+;; ja-rk-rule-basic を無効に
 (define ja-rk-rule-update
   (lambda ()
       '()))
