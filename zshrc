@@ -14,7 +14,7 @@ source $ZSH/oh-my-zsh.sh
 _Z_CMD=j
 if which brew > /dev/null; then
   . `brew --prefix`/etc/profile.d/z.sh
-elif [ -x /usr/share/z/z.sh ]; then
+elif [ -f /usr/share/z/z.sh ]; then
   . /usr/share/z/z.sh
 else
   . /usr/lib/z.sh
