@@ -38,7 +38,7 @@ function de() {
   local image_name=$(basename $PWD | sed -e 's/\-//')_web
   local container_id=$(docker ps -f name=$image_name -f status=running -l -q)
   if [ -n "$container_id" ]; then
-    docker exec -it $(docker ps -f name=$(basename $PWD | sed -e 's/\-//')_web -f status=running -l -q) $@
+    docker exec -it $container_id $@
   else
     echo "$image_name is not running" 1>&2
     return 1
