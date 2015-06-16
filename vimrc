@@ -158,7 +158,7 @@ cnoremap <C-x> <C-r>=expand('%:p:h')<CR>/
 cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 
 " <Leader>
-inoremap <Leader>date <C-R>=strftime('%Y/%m/%d(%a)')<CR>
+inoremap <Leader>date <C-R>=strftime('%Y-%m-%d(%a)')<CR>
 inoremap <Leader>time <C-R>=strftime('%H:%M:%S')<CR>
 
 " unite.vim
