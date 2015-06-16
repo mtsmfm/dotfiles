@@ -1,12 +1,4 @@
-dotfiles
-========
-
-## dotfiles
-
-.zshrc
-.tmux.conf
-.vimrc (using vundle)
-etc
+# dotfiles
 
 ## installation
 
