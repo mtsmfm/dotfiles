@@ -1,15 +1,18 @@
-ZSH=$HOME/.oh-my-zsh
+source /usr/share/antigen.zsh
 
-ZSH_THEME="amuse"
+antigen use oh-my-zsh
 
-plugins=(autojump bundler git gnu-utils heroku rails rake rbenv ruby thor vundle)
+antigen bundle bundler
+antigen bundle git
+antigen bundle heroku
+antigen bundle rails
+antigen bundle rbenv
+
+antigen theme amuse
+
+antigen apply
 
 unset RUBYOPT
-eval "$(rbenv init - zsh)"
-
-source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
 
 _Z_CMD=j
 if which brew > /dev/null; then
@@ -20,7 +23,6 @@ else
   . /usr/lib/z.sh
 fi
 
-## 補完時にhjklで選択
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
