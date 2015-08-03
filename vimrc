@@ -212,8 +212,6 @@ au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
 :cnoremap <C-F> <Right>
 :cnoremap <C-B> <Left>
 
-au BufRead,BufNewFile *_spec.rb,*.feature call s:SetupSpeCuke()
-
 highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 
 let g:rails_projections = {
