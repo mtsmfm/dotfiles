@@ -34,6 +34,7 @@ alias vi=vim
 
 SAVEHIST=999999999
 
+eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 
 function de() {
