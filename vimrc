@@ -55,7 +55,7 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'tpope/vim-endwise'
-NeoBundle 'mtsmfm/vim-surround'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'csexton/trailertrash.vim'
