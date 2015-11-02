@@ -34,6 +34,7 @@ SAVEHIST=999999999
 
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 function de() {
   local image_name=$(basename $PWD | sed -e 's/\-//')_web
