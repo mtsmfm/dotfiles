@@ -437,3 +437,4 @@ end)
 local r = require("runonce")
 
 r.run("dex -a")
+r.run("volumeicon")
