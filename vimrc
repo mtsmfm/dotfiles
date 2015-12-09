@@ -16,77 +16,50 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 
-NeoBundle 'gmarik/vundle'
-
-" colorschema
-NeoBundle 'Solarized'
-
-NeoBundle 'vimwiki'
-NeoBundle 'Rename'
-NeoBundle 'taglist.vim'
-NeoBundle 'repeat.vim'
-NeoBundle 'matchit.zip'
-NeoBundle 'SuperTab'
-
-NeoBundle 'scrooloose/syntastic'
-
-NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/unite-outline'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'basyura/unite-rails'
+NeoBundle 'coderifous/textobj-word-column.vim'
+NeoBundle 'csexton/trailertrash.vim'
+NeoBundle 'danro/rename.vim'
 NeoBundle 'ecomba/vim-ruby-refactoring'
-NeoBundle 'nelstrom/vim-textobj-rubyblock'
-
-NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'ervandew/supertab'
+NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'jgdavey/vim-blockle'
 NeoBundle 'kana/vim-textobj-fold'
 NeoBundle 'kana/vim-textobj-indent'
 NeoBundle 'kana/vim-textobj-lastpat'
-
-NeoBundle 'Shougo/vimfiler'
-
-NeoBundle 'h1mesuke/vim-alignta'
-
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'tsukkee/unite-help'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'basyura/unite-rails'
-NeoBundle 'tsukkee/unite-tag'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'maxbrunsfeld/vim-yankstack'
+NeoBundle 'mtscout6/vim-cjsx'
 NeoBundle 'mtsmfm/unite-turnip'
-
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'tpope/vim-rails'
+NeoBundle 'mtsmfm/vim-cursorline-boost'
+NeoBundle 'mtsmfm/vim-rspec-focus'
+NeoBundle 'nelstrom/vim-textobj-rubyblock'
+NeoBundle 'othree/yajs.vim'
+NeoBundle 'rhysd/clever-f.vim'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'tmhedberg/matchit'
 NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-fugitive'
-
-NeoBundle 'csexton/trailertrash.vim'
-
-NeoBundle 'kchmck/vim-coffee-script'
-
-NeoBundle 'mattn/gist-vim'
-NeoBundle 'mattn/webapi-vim'
-
-NeoBundle 'hail2u/vim-css3-syntax'
-
-NeoBundle 'maxbrunsfeld/vim-yankstack'
-
-NeoBundle 'slim-template/vim-slim'
-
-NeoBundle 'scrooloose/nerdtree'
-
-NeoBundle 'mtsmfm/vim-rspec-focus'
-
-NeoBundle 'rhysd/clever-f.vim'
-NeoBundle 'coderifous/textobj-word-column.vim'
-NeoBundle 'mattn/emmet-vim'
-
-NeoBundle 'jgdavey/vim-blockle'
-
-NeoBundle 'mtsmfm/vim-cursorline-boost'
-
-NeoBundle 'rking/ag.vim'
-
-NeoBundle 'mtscout6/vim-cjsx'
-NeoBundle 'othree/yajs.vim'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tsukkee/unite-help'
+NeoBundle 'tsukkee/unite-tag'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'vimwiki/vimwiki'
 
 call neobundle#end()
 
