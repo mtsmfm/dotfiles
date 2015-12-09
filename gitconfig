@@ -55,3 +55,5 @@
 	templatedir = ~/.gittemplate
 [merge]
 	tool = vimdiff
+[ghq]
+  root = ~/ghq
