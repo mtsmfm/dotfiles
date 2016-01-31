@@ -60,6 +60,7 @@ NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vimwiki/vimwiki'
+NeoBundle 'wakatime/vim-wakatime'
 
 call neobundle#end()
 
@@ -145,6 +146,7 @@ nnoremap <silent> ,uo :<C-u>Unite outline<CR>
 nnoremap <silent> ,ua :<C-u>Unite alignta<CR>
 nnoremap <silent> ,uh :<C-u>Unite help<CR>
 nnoremap <silent> ,ut :<C-u>Unite turnip<CR>
+nnoremap <silent> ,ur :<C-u>Unite file_rec<CR>
 
 " unite-alignta
 let g:unite_source_alignta_preset_arguments = [
@@ -169,6 +171,8 @@ nmap <C-p> <Plug>yankstack_substitute_older_paste
 " syntastic
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 3
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
+" let g:syntastic_ruby_checkers = ['rubocop']
 
 augroup MyAutoCmd
   autocmd!
