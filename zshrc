@@ -1,16 +1,20 @@
-source /usr/share/antigen.zsh
+source ~/.zplug/init.zsh
 
-antigen use oh-my-zsh
+zplug "plugins/bundler", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh, nice:10
+zplug "plugins/heroku", from:oh-my-zsh
+zplug "plugins/rbenv", from:oh-my-zsh
 
-antigen bundle bundler
-antigen bundle git
-antigen bundle heroku
-antigen bundle rails
-antigen bundle rbenv
+zplug "themes/amuse", from:oh-my-zsh
 
-antigen theme amuse
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
 
-antigen apply
+zplug load
 
 unset RUBYOPT
 
@@ -22,6 +26,8 @@ elif [ -f /usr/share/z/z.sh ]; then
 else
   . /usr/lib/z.sh
 fi
+
+zmodload -i zsh/complist
 
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
