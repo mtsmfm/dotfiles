@@ -1,5 +1,7 @@
 source ~/.zplug/init.zsh
 
+zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
+
 zplug "plugins/bundler", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh, nice:10
 zplug "plugins/heroku", from:oh-my-zsh
@@ -26,9 +28,6 @@ elif [ -f /usr/share/z/z.sh ]; then
 else
   . /usr/lib/z.sh
 fi
-
-bindkey -e
-zmodload -i zsh/complist
 
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
