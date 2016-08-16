@@ -27,6 +27,7 @@ else
   . /usr/lib/z.sh
 fi
 
+bindkey -e
 zmodload -i zsh/complist
 
 bindkey -M menuselect 'h' vi-backward-char
