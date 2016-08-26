@@ -2,7 +2,3 @@ eval $(keychain --eval --agents ssh -Q --quiet id_ecdsa)
 
 export DE='gnome'
 export EDITOR='vim'
-
-export GTK_IM_MODULE='uim'
-export QT_IM_MODULE='uim'
-export XMODIFIERS='@im=uim'
