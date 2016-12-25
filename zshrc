@@ -44,13 +44,7 @@ eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-function de() {
-  local image_name=$(basename $PWD | sed -e 's/\-//')_web
-  local container_id=$(docker ps -f name=$image_name -f status=running -l -q)
-  if [ -n "$container_id" ]; then
-    docker exec -it $container_id $@
-  else
-    echo "$image_name is not running" 1>&2
-    return 1
-  fi
-}
+alias dc="docker-compose"
+alias de="docker-compose exec web"
+alias dr="docker-compose run web"
+alias r="docker-compose exec web bin/rails"
