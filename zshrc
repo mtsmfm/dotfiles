@@ -1,13 +1,15 @@
 source ~/.zplug/init.zsh
 
+zplug "zplug/zplug"
+
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 
 zplug "plugins/bundler", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh, nice:10
+zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/heroku", from:oh-my-zsh
 zplug "plugins/rbenv", from:oh-my-zsh
 
-zplug "themes/amuse", from:oh-my-zsh
+zplug "themes/amuse", from:oh-my-zsh, as:theme
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
