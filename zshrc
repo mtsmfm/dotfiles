@@ -38,8 +38,6 @@ bindkey -M menuselect 'l' vi-forward-char
 
 [[ $TERM = xterm ]] && export TERM="xterm-256color"
 
-SAVEHIST=999999999
-
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
