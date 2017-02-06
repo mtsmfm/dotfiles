@@ -20,8 +20,6 @@ fi
 
 zplug load
 
-unset RUBYOPT
-
 _Z_CMD=j
 if which brew > /dev/null; then
   . `brew --prefix`/etc/profile.d/z.sh
@@ -38,11 +36,18 @@ bindkey -M menuselect 'l' vi-forward-char
 
 [[ $TERM = xterm ]] && export TERM="xterm-256color"
 
-eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+alias d="docker"
 alias dc="docker-compose"
-alias de="docker-compose exec web"
-alias dr="docker-compose run web"
+alias de="docker-compose exec"
+alias dr="docker-compose run --rm"
 alias r="docker-compose exec web bin/rails"
+alias drv="docker run --rm -it -v $PWD:/$PWD -w /$PWD"
+alias drop_connection="docker-compose exec db psql -U postgres -c 'SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pid <> pg_backend_pid();'"
+alias ruby="\
+docker run --rm -it -v $PWD:/$PWD -w /$PWD ruby ruby\
+"
+alias -g @ruby="\
+docker run --rm -i -v $PWD:/$PWD -w /$PWD ruby ruby\
+"
