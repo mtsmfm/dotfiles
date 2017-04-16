@@ -1,4 +1,0 @@
-branch=$(git rev-parse --abbrev-ref HEAD)
-case $branch in
-  "master" | "develop" ) echo "You can't push the ${branch} branch to the remote" && exit 1
-esac
