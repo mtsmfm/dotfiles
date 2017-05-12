@@ -54,6 +54,7 @@
   insteadOf = https://gist.github.com/
 [core]
   pager = diff-highlight | less
+	autocrlf = input
 [merge]
 	tool = vimdiff
 [ghq]
