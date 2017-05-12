@@ -54,8 +54,6 @@
   insteadOf = https://gist.github.com/
 [core]
   pager = diff-highlight | less
-[init]
-	templatedir = ~/.gittemplate
 [merge]
 	tool = vimdiff
 [ghq]
