@@ -43,7 +43,7 @@ alias dc="docker-compose"
 alias de="docker-compose exec"
 alias dr="docker-compose run --rm"
 alias r="docker-compose exec web bin/rails"
-alias drv="docker run --rm -it -v $PWD:/$PWD -w /$PWD"
+alias drv='docker run --rm -it -v $PWD:/$PWD -w /$PWD'
 alias drop_connection="docker-compose exec db psql -U postgres -c 'SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pid <> pg_backend_pid();'"
 alias ruby="\
 docker run --rm -it -v $PWD:/$PWD -w /$PWD ruby ruby\
