@@ -1,0 +1,7 @@
+{
+    "window.zoomLevel": 0,
+    "typescript.check.npmIsInstalled": false,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true
+}
