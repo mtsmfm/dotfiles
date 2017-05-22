@@ -1,4 +1,11 @@
-source ~/.zplug/init.zsh
+if [ -e /usr/local/opt/zplug ]; then
+  # brew
+  export ZPLUG_HOME=/usr/local/opt/zplug
+  source $ZPLUG_HOME/init.zsh
+else
+  # gentoo
+  source ~/.zplug/init.zsh
+fi
 
 zplug "zplug/zplug"
 
