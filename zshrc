@@ -11,12 +11,7 @@ zplug "zplug/zplug"
 
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 
-zplug "plugins/bundler", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/heroku", from:oh-my-zsh
-zplug "plugins/rbenv", from:oh-my-zsh
-
-zplug "themes/amuse", from:oh-my-zsh, as:theme
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
@@ -27,15 +22,6 @@ fi
 
 zplug load
 
-_Z_CMD=j
-if which brew > /dev/null; then
-  . `brew --prefix`/etc/profile.d/z.sh
-elif [ -f /usr/share/z/z.sh ]; then
-  . /usr/share/z/z.sh
-else
-  . /usr/lib/z.sh
-fi
-
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -43,7 +29,15 @@ bindkey -M menuselect 'l' vi-forward-char
 
 [[ $TERM = xterm ]] && export TERM="xterm-256color"
 
-eval "$(direnv hook zsh)"
+PROMPT='
+%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg_bold[red]%}%*%{$reset_color%}
+%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
+
+ZSH_THEME_GIT_PROMPT_PREFIX=" on%{$fg[magenta]%} "
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 alias d="docker"
 alias dc="docker-compose"
