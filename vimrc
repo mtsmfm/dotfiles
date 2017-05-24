@@ -1,75 +1,81 @@
-if has('vim_starting')
+"dein Scripts-----------------------------
+if &compatible
   set nocompatible               " Be iMproved
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
 
-" Let NeoBundle manage NeoBundle
 " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+if dein#load_state('~/.vim/bundles')
+  call dein#begin('~/.vim/bundles')
 
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
+  " Let dein manage dein
+  " Required:
+  call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'basyura/unite-rails'
-NeoBundle 'coderifous/textobj-word-column.vim'
-NeoBundle 'csexton/trailertrash.vim'
-NeoBundle 'danro/rename.vim'
-NeoBundle 'ecomba/vim-ruby-refactoring'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'h1mesuke/vim-alignta'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'jgdavey/vim-blockle'
-NeoBundle 'kana/vim-textobj-fold'
-NeoBundle 'kana/vim-textobj-indent'
-NeoBundle 'kana/vim-textobj-lastpat'
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'maxbrunsfeld/vim-yankstack'
-NeoBundle 'mtscout6/vim-cjsx'
-NeoBundle 'mtsmfm/unite-turnip'
-NeoBundle 'mtsmfm/vim-cursorline-boost'
-NeoBundle 'mtsmfm/vim-rspec-focus'
-NeoBundle 'nelstrom/vim-textobj-rubyblock'
-NeoBundle 'othree/yajs.vim'
-NeoBundle 'rhysd/clever-f.vim'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'tmhedberg/matchit'
-NeoBundle 'tpope/vim-cucumber'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tsukkee/unite-help'
-NeoBundle 'tsukkee/unite-tag'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'vim-scripts/taglist.vim'
-NeoBundle 'vimwiki/vimwiki'
-NeoBundle 'wakatime/vim-wakatime'
+  " Add or remove your plugins here:
+  call dein#add('Shougo/neomru.vim')
+  call dein#add('Shougo/unite-outline')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('Shougo/vimfiler')
+  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('basyura/unite-rails')
+  call dein#add('coderifous/textobj-word-column.vim')
+  call dein#add('csexton/trailertrash.vim')
+  call dein#add('danro/rename.vim')
+  call dein#add('ecomba/vim-ruby-refactoring')
+  call dein#add('ervandew/supertab')
+  call dein#add('h1mesuke/vim-alignta')
+  call dein#add('hail2u/vim-css3-syntax')
+  call dein#add('jgdavey/vim-blockle')
+  call dein#add('kana/vim-textobj-fold')
+  call dein#add('kana/vim-textobj-indent')
+  call dein#add('kana/vim-textobj-lastpat')
+  call dein#add('kana/vim-textobj-user')
+  call dein#add('kchmck/vim-coffee-script')
+  call dein#add('maxbrunsfeld/vim-yankstack')
+  call dein#add('mtscout6/vim-cjsx')
+  call dein#add('mtsmfm/unite-turnip')
+  call dein#add('mtsmfm/vim-cursorline-boost')
+  call dein#add('mtsmfm/vim-rspec-focus')
+  call dein#add('nelstrom/vim-textobj-rubyblock')
+  call dein#add('othree/yajs.vim')
+  call dein#add('rhysd/clever-f.vim')
+  call dein#add('rking/ag.vim')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('scrooloose/syntastic')
+  call dein#add('slim-template/vim-slim')
+  call dein#add('tmhedberg/matchit')
+  call dein#add('tpope/vim-cucumber')
+  call dein#add('tpope/vim-endwise')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('tpope/vim-haml')
+  call dein#add('tpope/vim-rails')
+  call dein#add('tpope/vim-repeat')
+  call dein#add('tpope/vim-surround')
+  call dein#add('tsukkee/unite-help')
+  call dein#add('tsukkee/unite-tag')
+  call dein#add('vim-ruby/vim-ruby')
+  call dein#add('vim-scripts/taglist.vim')
+  call dein#add('vimwiki/vimwiki')
+  call dein#add('wakatime/vim-wakatime')
 
-call neobundle#end()
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
 
 " Required:
 filetype plugin indent on
+syntax enable
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
 
 set term=screen-256color
 set t_Co=256
