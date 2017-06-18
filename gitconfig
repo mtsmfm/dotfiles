@@ -58,3 +58,7 @@
 	tool = vimdiff
 [ghq]
   root = ~/ghq
+[fetch]
+  prune = true
+[commit]
+  cleanup = scissors
