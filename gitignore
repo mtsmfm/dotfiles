@@ -3,3 +3,8 @@
 tags
 .ruby-version
 .envrc
+/vendor/bundle
+.docker-sync
+docker-compose.yml
+docker-sync.yml
+Dockerfile
