@@ -37,7 +37,6 @@
 [push]
 	default = current
 [core]
-	excludesfile = ~/.gitignore
 	editor = vim
 [github]
 	user = mtsmfm
