@@ -49,10 +49,8 @@
 [rebase]
 	autosquash = true
 	autostash = true
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-[url "git@gist.github.com:"]
-	insteadOf = https://gist.github.com/
+[url "https://github.com/"]
+	insteadOf = git@github.com:
 [core]
 	autocrlf = input
 [merge]
