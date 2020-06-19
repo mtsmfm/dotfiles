@@ -53,3 +53,4 @@ alias w="git add -A && git commit -m 'wip'"
 alias k="kubectl"
 
 export GPG_TTY=$(tty)
+export PATH=~/.bin:$PATH
