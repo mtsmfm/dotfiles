@@ -47,3 +47,7 @@ alias de="docker-compose exec"
 alias dr="docker-compose run --rm"
 alias drv='docker run --rm -it -v $PWD:/$PWD -w /$PWD'
 alias drop_connection="docker-compose exec db psql -U postgres -c 'SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pid <> pg_backend_pid();'"
+alias drq='docker-compose run --rm --no-deps --entrypoint "" $(basename $(pwd))'
+
+alias w="git add -A && git commit -m 'wip'"
+alias k="kubectl"
