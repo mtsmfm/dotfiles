@@ -25,7 +25,7 @@ bindkey -M menuselect 'l' vi-forward-char
 
 [[ $TERM = xterm ]] && export TERM="xterm-256color"
 
-if type kubectl > /dev/null; then
+if type kubectl > /dev/null && kubectl config current-context > /dev/null 2>&1; then
   PROMPT='
 %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg_bold[red]%}%* %{$fg[blue]%}$(kubectl config current-context)%{$reset_color%}
 %(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
