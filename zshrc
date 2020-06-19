@@ -51,3 +51,5 @@ alias drq='docker-compose run --rm --no-deps --entrypoint "" $(basename $(pwd))'
 
 alias w="git add -A && git commit -m 'wip'"
 alias k="kubectl"
+
+export GPG_TTY=$(tty)
