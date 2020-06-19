@@ -38,7 +38,8 @@
 [push]
 	default = current
 [core]
-	editor = vim
+	editor = code --wait
+	hooksPath = /dev/null
 [github]
 	user = mtsmfm
 [help]
