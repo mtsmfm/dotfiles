@@ -25,9 +25,15 @@ bindkey -M menuselect 'l' vi-forward-char
 
 [[ $TERM = xterm ]] && export TERM="xterm-256color"
 
-PROMPT='
-%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg_bold[red]%}%*%{$reset_color%}
+if type kubectl > /dev/null; then
+  PROMPT='
+%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg_bold[red]%}%* %{$fg[blue]%}$(kubectl config current-context)%{$reset_color%}
 %(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
+else
+  PROMPT='
+%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg_bold[red]%}%*
+%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
+fi
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" on%{$fg[magenta]%} "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
