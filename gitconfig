@@ -1,6 +1,7 @@
 [user]
 	email = mtsmfm@gmail.com
 	name = Fumiaki MATSUSHIMA
+	signingkey = 01EF198499B2C0E1
 [color]
 	ui = auto
 [alias]
@@ -61,3 +62,4 @@
 	prune = true
 [commit]
 	cleanup = scissors
+	gpgsign = true
