@@ -1,2 +1,2 @@
-EXCLUDES="README.md devcontainer-scripts"
+EXCLUDES="README.md"
 UNDOTTED="Library"
