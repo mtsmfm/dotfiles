@@ -9,8 +9,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
-[[ $TERM = xterm ]] && export TERM="xterm-256color"
-
 if type kubectl > /dev/null && kubectl config current-context > /dev/null 2>&1; then
   PROMPT='
 %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg_bold[red]%}%* %{$fg[blue]%}$(kubectl config current-context)%{$reset_color%}
@@ -38,5 +36,4 @@ alias drq='docker-compose run --rm --no-deps --entrypoint "" $(basename $(pwd))'
 alias w="git add -A && git commit -m 'wip'"
 alias k="kubectl"
 
-export GPG_TTY=$(tty)
 export PATH=~/.bin:$PATH
