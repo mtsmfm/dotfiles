@@ -1,22 +1,8 @@
-if [ ! -e ~/.zplug/init.zsh ]; then
-  git clone https://github.com/zplug/zplug --depth 1 ~/.zplug
-fi
-source ~/.zplug/init.zsh
+export ZSH=$HOME/.oh-my-zsh
 
-zplug "zplug/zplug"
+plugins=(git)
 
-zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
-
-zplug "plugins/git", from:oh-my-zsh
-
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
-
-zplug load
+source $ZSH/oh-my-zsh.sh
 
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
