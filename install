@@ -13,4 +13,4 @@ if [ ! -e ~/.oh-my-zsh ]; then
   git clone https://github.com/ohmyzsh/ohmyzsh ~/.oh-my-zsh --depth 1
 fi
 
-RCRC=$DOTFILES_DIR/rcrc rcup -d $DOTFILES_DIR
+yes | RCRC=$DOTFILES_DIR/rcrc rcup -d $DOTFILES_DIR
