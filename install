@@ -4,6 +4,9 @@ set -eux
 
 DOTFILES_DIR=$(dirname "$0")
 
+sudo apt-get update
+sudo apt-get install apt-transport-https -y
+
 wget -qO - https://apt.thoughtbot.com/thoughtbot.gpg.key | sudo apt-key add -
 echo "deb https://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
 sudo apt-get update
