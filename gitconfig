@@ -62,3 +62,5 @@
 [commit]
 	cleanup = scissors
 	gpgsign = true
+[init]
+	defaultBranch = main
