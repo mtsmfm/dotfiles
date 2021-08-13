@@ -17,3 +17,5 @@ if [ ! -e ~/.oh-my-zsh ]; then
 fi
 
 yes | RCRC=$DOTFILES_DIR/rcrc rcup -d $DOTFILES_DIR
+
+sudo chsh $(whoami) -s $(which zsh)
