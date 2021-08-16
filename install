@@ -25,6 +25,7 @@ if [ -z ${CHE_WORKSPACE_NAMESPACE+x} ]; then
   true
 else
   # che
-  git config core.editor vim
-  git config commit.gpgsign false
+  # git config core.editor vim
+  # git config commit.gpgsign false
+  true
 fi
