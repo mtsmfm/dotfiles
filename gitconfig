@@ -16,7 +16,7 @@
 	b = branch
 	ba = branch -a
 	bm = branch -a --merged
-	bd = branch --merged | grep -v '*' | xargs git branch -d
+	bd = ! git branch --merged | grep -v '*' | xargs git branch -d
 	d = diff
 	ds = diff --staged
 	wd = diff --word-diff
