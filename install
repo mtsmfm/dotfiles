@@ -2,21 +2,17 @@
 
 set -eux
 
-DOTFILES_DIR=$(dirname "$0")
-
 sudo apt-get update
-sudo apt-get install apt-transport-https -y
-
-wget -qO - https://apt.thoughtbot.com/thoughtbot.gpg.key | sudo apt-key add -
-echo "deb https://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
-sudo apt-get update
-sudo apt-get install rcm less zsh curl vim -y
+sudo apt-get install less zsh curl vim -y
 
 if [ ! -e ~/.oh-my-zsh ]; then
   git clone https://github.com/ohmyzsh/ohmyzsh ~/.oh-my-zsh --depth 1
 fi
 
-yes | RCRC=$DOTFILES_DIR/rcrc rcup -d $DOTFILES_DIR
+mkdir -p ~/.git
+cp git/ignore ~/.git/.ignore
+cp gitconfig ~/.gitconfig
+cp zshrc ~/.zshrc
 
 sudo chsh $(whoami) -s $(which zsh)
 
