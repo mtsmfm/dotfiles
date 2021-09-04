@@ -1,6 +1,4 @@
 .DS_Store
 *.swp
 tags
-.ruby-version
 .envrc
-/vendor/bundle
