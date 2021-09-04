@@ -2,6 +2,8 @@
 
 set -eux
 
+DOTFILES_DIR=$(dirname "$0")
+
 sudo apt-get update
 sudo apt-get install less zsh curl vim -y
 
@@ -10,9 +12,9 @@ if [ ! -e ~/.oh-my-zsh ]; then
 fi
 
 mkdir -p ~/.git
-cp git/ignore ~/.git/.ignore
-cp gitconfig ~/.gitconfig
-cp zshrc ~/.zshrc
+cp $DOTFILES_DIR/git/ignore ~/.git/.ignore
+cp $DOTFILES_DIR/gitconfig ~/.gitconfig
+cp $DOTFILES_DIR/zshrc ~/.zshrc
 
 sudo chsh $(whoami) -s $(which zsh)
 
