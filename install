@@ -17,16 +17,3 @@ cp $DOTFILES_DIR/gitconfig ~/.gitconfig
 cp $DOTFILES_DIR/zshrc ~/.zshrc
 
 sudo chsh $(whoami) -s $(which zsh)
-
-if [ -z ${CHE_WORKSPACE_NAMESPACE+x} ]; then
-  # non che
-  true
-else
-  # che
-  git config --global core.editor vim
-  git config --global commit.gpgsign false
-
-  if ! command -v che; then
-    wget -O- https://github.com/mtsmfm/che-cli/releases/download/0.2.0/che-cli-0.2.0-linux-amd64.tar.gz | sudo tar -xzv -C /usr/bin && sudo mv /usr/bin/che-cli /usr/bin/che
-  fi
-fi
