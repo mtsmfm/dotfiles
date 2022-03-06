@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
-plugins=(git)
+plugins=(git kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -34,6 +34,5 @@ alias drop_connection="docker-compose exec db psql -U postgres -c 'SELECT pg_ter
 alias drq='docker-compose run --rm --no-deps --entrypoint "" $(basename $(pwd))'
 
 alias w="git add -A && git commit -m 'wip'"
-alias k="kubectl"
 
 export PATH=~/.bin:$PATH
