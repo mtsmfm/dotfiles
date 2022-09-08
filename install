@@ -4,8 +4,23 @@ set -eux
 
 DOTFILES_DIR=$(dirname "$0")
 
-sudo apt-get update
-sudo apt-get install less zsh curl wget tar vim -y
+if command -v apt-get &> /dev/null; then
+  if ! [ $(id -u) = 0 ]; then
+    sudo apt-get update
+    sudo apt-get install less zsh curl wget tar vim -y
+  else
+    apt-get update
+    apt-get install less zsh curl wget tar vim -y
+  fi
+fi
+
+if command -v apk &> /dev/null; then
+  if ! [ $(id -u) = 0 ]; then
+    sudo apk add less zsh curl wget tar vim
+  else
+    apk add less zsh curl wget tar vim
+  fi
+fi
 
 if [ ! -e ~/.oh-my-zsh ]; then
   git clone https://github.com/ohmyzsh/ohmyzsh ~/.oh-my-zsh --depth 1
@@ -15,5 +30,3 @@ mkdir -p ~/.git
 cp $DOTFILES_DIR/git/ignore ~/.git/.ignore
 cp $DOTFILES_DIR/gitconfig ~/.gitconfig
 cp $DOTFILES_DIR/zshrc ~/.zshrc
-
-sudo chsh $(whoami) -s $(which zsh)
