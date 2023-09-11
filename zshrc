@@ -36,3 +36,7 @@ alias drq='docker-compose run --rm --no-deps --entrypoint "" $(basename $(pwd))'
 alias w="git add -A && git commit -m 'wip'"
 
 export PATH=~/.bin:~/.local/bin:$PATH
+
+if [ "$CODESPACES" = "true" ]; then
+  export HISTFILE=/workspaces/.zsh_history
+fi

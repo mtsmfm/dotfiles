@@ -7,10 +7,10 @@ DOTFILES_DIR=$(dirname "$0")
 if command -v apt-get; then
   if ! [ $(id -u) = 0 ]; then
     sudo apt-get update
-    sudo apt-get install less zsh curl wget tar vim -y
+    sudo apt-get install less zsh curl wget tar vim peco -y
   else
     apt-get update
-    apt-get install less zsh curl wget tar vim -y
+    apt-get install less zsh curl wget tar vim peco -y
   fi
 fi
 
@@ -30,3 +30,7 @@ mkdir -p ~/.git
 cp $DOTFILES_DIR/git/ignore ~/.git/.ignore
 cp $DOTFILES_DIR/gitconfig ~/.gitconfig
 cp $DOTFILES_DIR/zshrc ~/.zshrc
+
+mkdir -p ~/.bin
+curl https://raw.githubusercontent.com/pj8/sssh/v3.0.0/sssh > ~/.bin/sssh
+chmod +x ~/.bin/sssh
