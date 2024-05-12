@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
-plugins=(git kubectl)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
