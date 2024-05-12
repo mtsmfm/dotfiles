@@ -9,7 +9,8 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
-if type kubectl > /dev/null && kubectl config current-context > /dev/null 2>&1; then
+kubectlstderr=$(kubectl config current-context 2>&1 >/dev/null)
+if [[ $? == 0 ]] && [[ ${#kubectlstderr} == 0 ]]; then
   PROMPT='
 %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg_bold[red]%}%* %{$fg[blue]%}$(kubectl config current-context)%{$reset_color%}
 %(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
