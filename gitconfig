@@ -39,7 +39,6 @@
 	default = current
 [core]
 	editor = code --wait
-	hooksPath = /dev/null
 [github]
 	user = mtsmfm
 [help]
