@@ -34,3 +34,5 @@ cp $DOTFILES_DIR/zshrc ~/.zshrc
 mkdir -p ~/.bin
 curl https://raw.githubusercontent.com/pj8/sssh/v3.0.0/sssh > ~/.bin/sssh
 chmod +x ~/.bin/sssh
+
+curl https://mise.run | sh
