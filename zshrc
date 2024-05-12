@@ -37,6 +37,8 @@ alias w="git add -A && git commit -m 'wip'"
 
 export PATH=~/.bin:~/.local/bin:$PATH
 
+eval "$(/home/mtsmfm/.local/bin/mise activate zsh)"
+
 if [ "$CODESPACES" = "true" ]; then
   export HISTFILE=/workspaces/.zsh_history
 fi
