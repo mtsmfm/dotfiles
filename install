@@ -7,10 +7,10 @@ DOTFILES_DIR=$(dirname "$0")
 if command -v apt-get; then
   if ! [ $(id -u) = 0 ]; then
     sudo apt-get update
-    sudo apt-get install less zsh curl wget tar vim peco -y
+    sudo apt-get install less zsh curl wget tar vim peco -y -o DPkg::Options::="--force-confnew"
   else
     apt-get update
-    apt-get install less zsh curl wget tar vim peco -y
+    apt-get install less zsh curl wget tar vim peco -y -o DPkg::Options::="--force-confnew"
   fi
 fi
 
