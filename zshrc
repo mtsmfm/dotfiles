@@ -43,3 +43,6 @@ eval "$(~/.local/bin/mise activate zsh)"
 if [ "$CODESPACES" = "true" ]; then
   export HISTFILE=/workspaces/.zsh_history
 fi
+
+alias clrun='(docker start $(basename $(pwd)) && docker attach $(basename $(pwd))) || docker run -v .:/$(pwd) -v $HOME/.claude:/home/user/.claude -v $HOME/.claude.json:/home/user/.claude.json -it -w /$(pwd) -u 1000 --name $(basename $(pwd)) ghcr.io/mtsmfm/devimages/node:22 bash'
+alias clrm='docker rm $(basename $(pwd))'
