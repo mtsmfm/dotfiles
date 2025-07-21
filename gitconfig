@@ -7,31 +7,19 @@
 [alias]
 	co = checkout
 	st = status -sb
-	pd = push --delete
 	c = commit -v
 	a = add
 	al = add -A .
 	au = add -u
 	ap = add -p
 	b = branch
-	ba = branch -a
-	bm = branch -a --merged
 	bd = ! git branch --merged | grep -v '*' | xargs git branch -d
 	d = diff
 	ds = diff --staged
-	wd = diff --word-diff
 	l = log --decorate
 	lo = log --oneline --decorate --graph
-	ls = log --stat --decorate
 	lp = log -p --decorate
-	ru = remote update --prune
-	gn = grep -n
-	su = submodule update
 	rh = reset HEAD^
-	ri = !sh -c 'git rebase -i HEAD~$0'
-	rmrf = !sh -c 'git branch -d $0 && git push origin :$0'
-	cob = !sh -c 'git checkout origin/$0 -b $0'
-	gsub = "!sh -c 'git grep -l $0 $2 | xargs sed -i \"s/$0/$1/g\"'"
 	f = fetch --all
 [log]
 	date = iso
