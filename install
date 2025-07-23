@@ -4,8 +4,8 @@ set -eux
 
 DOTFILES_DIR=$(dirname "$0")
 
-if command -v apt-get; then
-  if ! [ $(id -u) = 0 ]; then
+if command -v apt-get >/dev/null 2>&1; then
+  if ! [ $(id -u) = 0  ] && command -v sudo >/dev/null 2>&1; then
     sudo apt-get update
     sudo apt-get install less zsh curl wget tar vim peco -y -o DPkg::Options::="--force-confnew"
   else
@@ -14,8 +14,8 @@ if command -v apt-get; then
   fi
 fi
 
-if command -v apk; then
-  if ! [ $(id -u) = 0 ]; then
+if command -v apk >/dev/null 2>&1; then
+  if ! [ $(id -u) = 0 ] && command -v sudo >/dev/null 2>&1; then
     sudo apk add less zsh curl wget tar vim
   else
     apk add less zsh curl wget tar vim
